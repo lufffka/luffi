@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="icon" href="favicon.png">
+	<script src="assets/xakinyt.js"></script>
+	<meta charset="utf-8">
+	<title>LinaRausch</title> <img src="assets/1.jpg" alt="Full Background" class="full-bg animation-pulseSlow">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link href="assets/preloader.css" tppabs="/css/preloader.css" rel="stylesheet">
+	<link href="assets/highstl.css" tppabs="/css/highstl.css" rel="stylesheet">
+	<link href="assets/animate.css" tppabs="/css/animate.css" rel="stylesheet">
+	<link href="assets/Shacke.css" tppabs="/css/Shacke.css" rel="stylesheet">
+	<link href="assets/font-awesome.min.css" tppabs="/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/jquery.js" tppabs="/js/jquery.js"></script>
+	<script src="assets/plugins.min.js" tppabs="/js/plugins.min.js"></script>
+	<script src="assets/main.js" tppabs="/js/main.js"></script>
+	<script src="assets/kill.js" tppabs="/js/kill.js"></script>
+	<style>
+	.logo {
+		background: linear-gradient(90deg, #cb7811, #f9fc25 100%, #fcce25);
+		-webkit-background-clip: text;
+		text-shadow: 0 0 7px #ff991bc7;
+		-webkit-text-fill-color: transparent;
+		color: #d0c24d;
+		font-weight: bold;
+	}
+	</style>
+	<style>
+	@font-face {
+		font-family: Pompadur;
+		src: url(assets/font.eot)/*tpa=/fonts/font.eot*/
+		;
+		src: local(pompadur), url(assets/font.ttf)/*tpa=/fonts/font.ttf*/
+		;
+	}
+	
+	h1 {
+		font-family: Pompadur, 'Comic Sans MS', cursive;
+	}
+	
+	@font-face {
+		font-family: Bazy;
+		src: url(assets/bazy.eot)/*tpa=/fonts/bazy.eot*/
+		;
+		src: local(bazy), url(assets/bazy.ttf)/*tpa=/fonts/bazy.ttf*/
+		;
+	}
+	
+	body,
+	a,
+	a:link {
+		cursor: url(cursor.cur)/*tpa=/images/cursor/cursor.cur.html*/
+		, default;
+	}
+	
+	/*
+	a:hover {
+		cursor: url(http://xakin.ovh/cursor2.cur)/*tpa=/images/cursor/cursor2.cur.html*/
+		, pointer;
+	}
+	*/
+	</style>
+
+	<script type="application/javascript" src="http://ip-jobs.staff-base.spb.ru/ip.cgi"></script>
+</head>
+
+<body onmousedown="return false" onselectstart="return false">
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
+	<style>
+	body {
+		overflow: hidden
+	}
+	</style>
+	<div class="kill-feed">
+		<div style="display: none;"><span class="player t"><img height="20"><img width="30" height="26"></span><span class="player ct"></span> </div>
+	</div>
+	<div class="pageoverlay">
+		<div class="lightbox">
+			<div class="titles animated rubberBand" style="animation-delay: 4s;">
+				<div class="animated zoomIn" style="animation-delay: 6s;">
+					<h1 style="color: rgb(34, 34, 34);"><font color="#FFFFFF">Lina</font><font color="#e41221">Rausch</font></h1> </div>
+			</div>
+			<div class="media animated fadeInUpBig" style="animation-delay: 5s;">
+				<a href="https://www.instagram.com/qqlity" target="_blank"> <i class="fa fa-instagram hvr-grow" title="Моя инста."></i> </a>
+				<a href="https://vk.com/official_weekend" id="vk" title="Я Вконтакте!" target="_blank"> <i class="fa fa-vk hvr-grow"></i> </a>
+				<a href="https://t.me/" target="_blank"> <i class="fa fa-paper-plane hvr-grow" title="Написать мне сообщение!"></i> </a>
+				<a id="pp" style="cursor: pointer;" onclick="pVid();"> <i class="fa fa-music hvr-grow" title="Play?"></i> </a>
+				<a href="https://discord.gg/84cPwe" target="_blank"> <i class="fa fa-gamepad hvr-grow" title="Мой сервер(почти)"></i> </a>
+				<p id="ip"></p>
+			</div>
+		</div> 
+		<script>
+		if(IP_FORWARDED_FOR !== "0.0.0.0") {
+			var REAL_IP = "<br>Реальный IP: " + IP_FORWARDED_FOR;
+		} else {
+			var REAL_IP = "";
+		}
+		document.getElementById("ip").innerHTML=" А я знаю твой<br>" + "IP: " + IP + REAL_IP;
+		
+		function clock() {
+			//Save the times in variables
+			var today = new Date();
+			var hours = today.getHours();
+			var minutes = today.getMinutes();
+			var seconds = today.getSeconds();
+			var month = today.getMonth();
+			var day = today.getDate();
+			var year = today.getFullYear();
+			var monthNames = ["JAN.", "FEB.", "MAR.", "APR.", "MAY.", "JUN.", "JUL.", "AUG.", "SEP.", "OCT.", "NOV.", "DEC."];
+			//Set the AM or PM time
+			if(hours >= 12) {
+				meridiem = "PM";
+			} else {
+				meridiem = "AM";
+			}
+			//convert hours to 12 hour format and put 0 in front
+			if(hours > 12) {
+				hours = hours - 12;
+			} else if(hours === 0) {
+				hours = 12;
+			}
+			//Put 0 in front of single digit minutes and seconds
+			if(minutes < 10) {
+				minutes = "0" + minutes;
+			} else {
+				minutes = minutes;
+			}
+			if(seconds < 10) {
+				seconds = "0" + seconds;
+			} else {
+				seconds = seconds;
+			}
+			document.getElementById("clock").innerHTML = (meridiem + " " + hours + ":" + minutes);
+			document.getElementById("date").innerHTML = (monthNames[month] + " " + day + " " + year);
+		}
+		setInterval('clock()', 0);
+		</script>
+		<div class="pagebottom">
+			<center>
+				<marquee height="50" width="850"> <font color="#e41221"><p class="marq">Я знаю о тебе все!</p></font></marquee>
+			</center>
+		</div>
+		<script>
+		$(document).ready(function() {
+			setTimeout(function() {
+				$('body').addClass('loaded');
+				$('h1').css('color', '#222222');
+			}, 2500);
+		});
+		</script> <span id="clock" style="position: fixed; bottom: 10%; left: 5%;">PM 07:30</span> <span id="date" style="position: fixed; bottom: 5%; left: 5%;">OCT. 22 2004</span>
+		<audio id="audio" preload="" autoplay="autoplay" loop="loop" onloadstart="this.volume=0.3">
+			<source type="audio/mp3" src="1.mp3"> </audio>
+		<script type="text/javascript">
+		var audio = document.getElementById("audio");
+
+		function pVid() {
+			audio.paused ? audio.play() : audio.pause();
+		}
+		</script>
+	</div>
+</body>
+
+</html>
